@@ -8,15 +8,31 @@ import { Joke } from './chuck.model';
   styleUrls: ['./chuck.component.scss']
 })
 export class ChuckComponent implements OnInit {
-  jokesArr: Array<Joke> = [];
+  currentJoke: Joke = {
+    value: '',
+    id: '',
+    url: '',
+    iconUrl: ''
+  };
+  iconUrl: string = '';
 
   constructor(private service: ChuckService) {
-    this.service.getChuck().subscribe((joke: Joke) => {
-      this.jokesArr.push(joke);
-    })
+    this.getJoke(true)
    }
 
   ngOnInit(): void {
+  }
+
+  refresh() {
+    this.getJoke();
+  }
+
+  getJoke(firstTime: boolean = false): void {
+    console.log('new joke incoming')
+    this.service.getChuck().subscribe((joke: Joke) => {
+      this.currentJoke = joke;
+      if(firstTime) this.iconUrl = joke.iconUrl;
+    })
   }
 
 }
