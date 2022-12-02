@@ -1,6 +1,6 @@
 # DemoProject
 
-Quick and dirt demo show casing my professional knowledge of Angular
+Quick and dirty demo show casing my professional knowledge of Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
