@@ -18,3 +18,31 @@
         }
     }
 }
+
+@media (max-width: styles.$breakpoint-sm) {
+    .content {
+        margin: 0 0.5rem 0.5rem 0.5rem;
+        .categories {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .joke {
+            font-size: x-large;
+            font-weight: 400;
+        }
+    }
+}
+@media (max-width: styles.$breakpoint-xs) {
+    .content {
+        .categories {
+            grid-template-columns: 1fr 1fr;
+        }
+        .joke {
+            font-size: large;
+        }
+        .categorize {
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

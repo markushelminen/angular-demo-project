@@ -1,3 +1,4 @@
+@use 'src/styles';
 .content {
     text-align: center;
     .form-control {
@@ -15,5 +16,44 @@
     }
     button {
         margin-block-start: 0.8rem;
+    }
+}
+
+@media (max-width: styles.$breakpoint-md) {
+    .content {
+        .form-control {
+            label {
+                grid-column: 5 / span 2;
+            }
+            input {
+                grid-column: 7 / span 5;
+            }    
+        }
+    }
+}
+@media (max-width: styles.$breakpoint-sm) {
+    .content {
+        .form-control {
+label {
+            grid-column: 5 / span 2;
+        }
+        input {
+            grid-column: 7 / span 4;
+            
+        }
+        }
+    }
+}
+@media (max-width: styles.$breakpoint-xs) {
+    .content {
+        .form-control {
+        label {
+            grid-column: 4 / span 3;
+        }
+        input {
+            grid-column: 7 / span 4;
+            
+        }
+        }
     }
 }

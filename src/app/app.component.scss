@@ -4,16 +4,16 @@
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 
-    .header {
+    header {
         text-align: center;
         background-color: styles.$light;
-        margin-bottom: 12px;
+        margin-bottom: 1rem;
         display: flex;
         justify-content:flex-start;
 
         .title {
             color: styles.$black;
-            margin-inline-start: 4em;
+            margin-inline-start: 20%;
         }
 
         p {
@@ -37,11 +37,41 @@
     }
 }
 
-
+@media (max-width: styles.$breakpoint-md) {
+    .container {
+        header {
+            flex-wrap: wrap;
+            app-nav-bar {
+                margin-inline-start: 20%;
+                margin-block-end: 1rem;
+            }
+        }
+    }
+}
 @media (max-width: styles.$breakpoint-sm) {
     .container {
         .content {
             grid-template-columns: 1fr;
+        }
+        header {
+            .title {
+                margin-inline-start: 1rem;
+            }
+            app-nav-bar {
+                margin-inline-start: 1rem;
+            }
+        }
+    }
+}
+@media (max-width: styles.$breakpoint-xs) {
+    .container {
+        header {
+            .title {
+                margin-inline-start: 0.5rem;
+            }
+            app-nav-bar {
+                margin-inline-start: 0.5rem;
+            }
         }
     }
 }

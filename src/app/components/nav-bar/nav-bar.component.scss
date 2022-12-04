@@ -3,10 +3,25 @@
 .nav {
     display: flex;
     justify-content: center;
-    column-gap: 50px;
+    column-gap: 4rem;
 
     .nav-item {
         background-color: styles.$bright;
         color: styles.$black;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width: styles.$breakpoint-sm) {
+    .nav {
+        margin-block-start: 0.5rem;
+    }
+}
+
+@media (max-width: styles.$breakpoint-xs) {
+    .nav {
+        flex-direction: row;
+        column-gap: 0.5rem;
     }
 }

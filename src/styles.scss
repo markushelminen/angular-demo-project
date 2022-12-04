@@ -6,8 +6,10 @@ $medium: #046b99;
 $dark: #1c304A;
 $black: #161616;
 
-$breakpoint-sm: 768px;
-$breakpoint-md: 1487px;
+$breakpoint-xs: 495px;
+$breakpoint-sm: 814px;
+$breakpoint-md: 1058px;
+$breakpoint-lg: 1487px;
 
 body {
     margin: 0px;
@@ -18,7 +20,7 @@ body {
 button {
     display: inline-flex;
     background-color: $medium;
-    box-shadow: 0 0.1rem 0.2rem 0 $black;
+    box-shadow: 0 0.1rem 0.1rem 0 $dark;
     align-items: center;
     justify-content: center;
     cursor: pointer;
