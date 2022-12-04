@@ -5,3 +5,52 @@ $bright: #00cfff;
 $medium: #046b99;
 $dark: #1c304A;
 $black: #161616;
+
+$breakpoint-sm: 768px;
+$breakpoint-md: 1487px;
+
+body {
+    margin: 0px;
+
+}
+
+
+button {
+    display: inline-flex;
+    background-color: $medium;
+    box-shadow: 0 0.1rem 0.2rem 0 $black;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 2rem;
+    padding: 0.3rem 1.6rem 0.4rem;
+    margin: 0 0.8rem 0.8rem 0;
+    max-width: 100%;
+    min-width: 6rem;
+    color: $white;
+    font-size: 1.2rem;
+    text-overflow: ellipsis;
+    border-radius: 0.4rem;
+    border: solid 0.1rem $black;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    box-sizing: border-box;
+    text-transform: none;
+    appearance: button;
+    -webkit-appearance: button;
+}
+
+input {
+    padding: 0.2rem 0.5rem;
+    color: $black;
+    border-radius: 0.2rem;
+    border: 0.1rem solid $black;
+    background-color: $white;
+    line-height: 1.2;
+    overflow: visible;
+    appearance: textfield;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+}

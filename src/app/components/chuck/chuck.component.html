@@ -1,6 +1,14 @@
 <div class="content">
-    <div class="joke">
-        <p class="chuck-joke">{{currentJoke.value}}</p>
+    <div class="categorize">
+        <h2>Choose a Chuck Norris fact from a category</h2>
     </div>
-    <button class="get-chuck" (click)="refresh()">Refresh</button>
+    <div class="categories">
+        <div *ngFor="let item of categories">
+            <button class="item btn" (click)="selectCategory(item)">{{item}}</button>
+        </div>
+    </div>
+    <div class="joke-wrap">
+        <p class="joke">{{currentJoke.value}}</p>
+        <button class="btn get-chuck" (click)="getJoke()">Refresh</button>
+    </div>
 </div>

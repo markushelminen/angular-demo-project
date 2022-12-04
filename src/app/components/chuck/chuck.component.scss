@@ -1,6 +1,20 @@
+@use 'src/styles';
 .content {
     .joke {
-        font-size: x-large;
+        font-size:xx-large;
         font-weight: 500;
+    }
+    .categories {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        .item {
+            color: styles.$black;
+            background-color: styles.$white;
+        }
+    }
+    .categorize {
+        h2 {
+            font-weight: 400;
+        }
     }
 }

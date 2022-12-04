@@ -1,12 +1,18 @@
 <div class="content">
-    <div class="form">
+    <p>
+        <code>
+                Zip code field will auto complete city field on blur if zip code is valid and city is empty
+            </code>
+    </p>
+    <div class="form" [formGroup]="addressForm">
+        <div class="form-control">
+            <label name="zipcode">Zip code</label>
+            <input type="text" placeholder="Zip code" formControlName="zipcode" (blur)="searchForCity()">
+            </div>
         <div class="form-control">
             <label name="city">City</label>
-            <input type="text" name="city" id="">
+            <input placeholder="City" type="text" formControlName="city" id="">
         </div>
-        <div class="form-control">
-            <label name="zipcode">zip code</label>
-            <input type="text" name="zipcode" id="">
-        </div>
+        <button class="btn" type="submit" (click)="onSubmit()">Submit</button>
     </div>
 </div>

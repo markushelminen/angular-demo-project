@@ -1,18 +1,47 @@
 @use 'src/styles';
 
 .container {
-    margin: 0 50px 0 50px;
-    display: grid;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+
+    .header {
+        text-align: center;
+        background-color: styles.$light;
+        margin-bottom: 12px;
+        display: flex;
+        justify-content:flex-start;
+
+        .title {
+            color: styles.$black;
+            margin-inline-start: 4em;
+        }
+
+        p {
+            align-self: end;
+            a {
+                text-decoration: none;
+            }
+        }
+
+        app-nav-bar {
+            margin-inline-start: 4em;
+            align-self: center;
+        }
+    }
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        .item {
+            justify-self: center;
+        }
+    }
 }
 
-.header {
-    text-align: center;
 
-    .title {
-        color: styles.$black;
-    }
-
-    p a {
-        text-decoration: none;
+@media (max-width: styles.$breakpoint-sm) {
+    .container {
+        .content {
+            grid-template-columns: 1fr;
+        }
     }
 }

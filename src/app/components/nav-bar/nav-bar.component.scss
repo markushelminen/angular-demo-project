@@ -1,0 +1,12 @@
+@use 'src/styles';
+
+.nav {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+
+    .nav-item {
+        background-color: styles.$bright;
+        color: styles.$black;
+    }
+}

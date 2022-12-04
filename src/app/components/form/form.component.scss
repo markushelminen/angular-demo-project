@@ -1,0 +1,19 @@
+.content {
+    text-align: center;
+    .form-control {
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: center;
+        label {
+            grid-column: 5 / span 2;
+        }
+        input {
+            grid-column: 7 / span 3;
+            
+        }
+    }
+    button {
+        margin-block-start: 0.8rem;
+    }
+}
